@@ -1,35 +1,34 @@
-'use strict'
+'use strict';
 
 class StringBuilder {
-    #value = "";
+  #value = '';
 
-    constructor (initialValue) {
-        this.#value = initialValue;
-    }
+  constructor(initialValue) {
+    this.#value = initialValue;
+  }
 
-    getValue () {
-        return this.#value;
-    }
+  getValue() {
+    return this.#value;
+  }
 
-    padEnd (str) {
-        this.#value = this.#value + str;
-    }
+  padEnd(str) {
+    this.#value = this.#value + str;
+  }
 
-	padStart (str) {
-    	this.#value = str + this.#value;
-	}
+  padStart(str) {
+    this.#value = str + this.#value;
+  }
 
-	padBoth (str) {
-    	this.#value = str + this.#value + str;
-	}
+  padBoth(str) {
+    this.#value = str + this.#value + str;
+  }
 }
 
-const builder = new StringBuilder(".");
+const builder = new StringBuilder('.');
 console.log(builder.getValue()); // "."
-builder.padStart("^");
+builder.padStart('^');
 console.log(builder.getValue()); // "^."
-builder.padEnd("^");
+builder.padEnd('^');
 console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
+builder.padBoth('=');
 console.log(builder.getValue()); // "=^.^="
-
