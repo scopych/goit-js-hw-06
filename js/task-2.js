@@ -16,10 +16,10 @@ class Storage {
   }
 
   removeItem(itemToRemove) {
-      const indx = this.#items.indexOf(itemToRemove);
-	  if (indx !== -1) {
-        this.#items.splice(indx, 1);
-	  }
+    const indx = this.#items.indexOf(itemToRemove);
+    if (indx !== -1) {
+      this.#items.splice(indx, 1);
+    }
   }
 }
 
